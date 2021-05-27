@@ -16,7 +16,7 @@ void draw()
   myWalker.render();
   
   // Walker 2
-  myWalker2.randomWalk();
+  myWalker2.randomWalkerBiased();
   myWalker.fillColor();
   myWalker2.render();
 }
