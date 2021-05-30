@@ -61,77 +61,42 @@ class Walker
   {
     int rng = int(random(100));
     
-    if (rng < 15)  // 15%
+    if (rng < 39)  // 40%
     {
      number = 1; 
     }
-    else if (rng >= 15 && rng <= 26)  // 12%
+    else if (rng >= 40 && rng <= 59)  // 20%
     {
      number = 2; 
     }
-    else if (rng >= 27 && rng <= 38)  // 12%
+    else if (rng >= 60 && rng <= 79)  // 20%
     {
      number = 3;
     }
-    else if (rng >= 39 && rng <= 50)  // 12%
+    else if (rng >= 80 && rng <= 99)  // 20%
     {
      number = 4;
     }
-    else if (rng >= 51 && rng <= 62)  // 12% 
-    {
-     number = 5;
-    }
-    else if (rng >= 63 && rng <= 74)  // 12%
-    {
-     number = 6;
-    }
-    else if (rng >= 75 && rng <= 86)  // 12%
-    {
-     number = 7;
-    }
-    else if (rng >= 87 && rng <= 99) // 13%
-    {
-     number = 8;
-    }
     
-    if (number == 1)  // Move North (15%)
+    if (number == 1)  // Move North (40%)
     {
      y += 10;
     }
-    else if (number == 2)  // Move South (12%)
+    else if (number == 2)  // Move South (20%)
     {
       y -= 10;
     }
-    else if (number == 3)  // Move East (12%)
+    else if (number == 3)  // Move East (20%)
     {
       x += 10;
     }
-    else if (number == 4)  // Move West (12%)
+    else if (number == 4)  // Move West (20%)
     {
       x -= 10;
     }
-    else if (number == 5) // Move Northwest (12%)
-    {
-     x -= 10;
-     y += 10;
-    }
-    else if (number == 6)  // Move Northeast (12%)
-    {
-     x += 10;
-     y += 10;
-    }
-    else if (number == 7)  // Move Southwest (12%)
-    {
-     x -= 10;
-     y -= 10;
-    }
-    else if (number == 8)  // Move Southeast (13%)
-    {
-     x += 10;
-     y -= 10;
-    }
   }
-   // Fill Color of the Walker
+  
+  // Fill Color of the Walker
   void fillColor()
   {
     fill(int(random(256)), int(random(256)), int(random(256)), int(random(50, 101)));

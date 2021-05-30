@@ -11,11 +11,13 @@ Walker myWalker2 = new Walker();
 void draw()
 {
   // Walker 1
+  noStroke();
   myWalker.randomWalk();
   myWalker.fillColor();
   myWalker.render();
   
   // Walker 2
+  noStroke();
   myWalker2.randomWalkerBiased();
   myWalker.fillColor();
   myWalker2.render();
