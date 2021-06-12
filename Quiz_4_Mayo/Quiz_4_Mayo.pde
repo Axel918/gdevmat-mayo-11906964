@@ -9,11 +9,7 @@ Walker perlinWalker = new Walker();
 
 void draw()
 {
-  
-  
   perlinWalker.circleColor();
   perlinWalker.render();
   perlinWalker.perlinWalk();
-  
-  
 }

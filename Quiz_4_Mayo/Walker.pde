@@ -38,8 +38,8 @@ public class Walker
    ty += 0.01f;
    tScale += 0.01f;
    
-   tRed += 1.01f;
-   tGreen += 1.01f;
-   tBlue += 1.01f;
+   tRed += 0.01f;
+   tGreen += 0.01f;
+   tBlue += 0.01f;
  }
 }
