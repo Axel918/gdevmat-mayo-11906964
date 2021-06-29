@@ -24,5 +24,4 @@ void draw()
   // Perlin Walker
   perlinWalker.circleRender();
   perlinWalker.perlinWalk();
-  
 }
