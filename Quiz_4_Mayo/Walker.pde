@@ -10,15 +10,15 @@ public class Walker
  public float tScale = 0;
  
  // Changes Fill Color of the Circle
- public float tRed = 255;
- public float tGreen = 255;
- public float tBlue = 255;
+ public float tRed = 100;
+ public float tGreen = 2000;
+ public float tBlue = 10000;
   
  void circleColor()
  {
-    red = random(map(noise(tRed), 0, 1, 0, 255), 255);
-    green = random(map(noise(tGreen), 0, 1, 0, 255), 255);
-    blue = random(map(noise(tBlue), 0, 1, 0, 255), 255);
+    red = map(noise(tRed), 0, 1, 0, 255);
+    green = map(noise(tGreen), 0, 1, 0, 255);
+    blue = map(noise(tBlue), 0, 1, 0, 255);
    
    fill(red, green, blue);
    noStroke(); 
