@@ -24,6 +24,12 @@ void draw()
    mouse.normalize().mult(250);
    line(-mouse.x, -mouse.y, mouse.x, mouse.y);
    
+   // Colorless Line
+   strokeWeight(20);
+   stroke(130);
+   mouse.normalize().mult(50);
+   line(-mouse.x, -mouse.y, mouse.x, mouse.y);
+   
    // White Inner Glow
    strokeWeight(5);
    stroke(255, 255, 255);
@@ -36,5 +42,7 @@ void draw()
    mouse.normalize().mult(50);
    line(-mouse.x, -mouse.y, mouse.x, mouse.y);
    
+   // Print magnitude of one side of the light saber
+   mouse.normalize().mult(125);
    println(mouse.mag());
 }
