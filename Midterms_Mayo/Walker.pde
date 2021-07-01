@@ -38,10 +38,11 @@ public class Walker
   void newPosition()
   {
     PVector direction = PVector.sub(position, circlePosition);
-    
-    
-    
-     
+    circlePosition.add(direction.normalize());
+  }
+  
+  void computeDirection()
+  {
     
   }
   

@@ -15,6 +15,7 @@ void setup()
   size(1080, 720, P3D);
   camera(0, 0, Window.eyeZ, 0, 0, 0, 0, -1, 0);
   
+  // Initialize other matters
   for (int i = 0; i < 100 ; i++)
   {
     w[i] = new Walker();
@@ -31,8 +32,10 @@ void draw()
  for (int i = 0; i < 100; i++)
  {
    w[i].circleRender();
+   w[i].computeDirection();
+   w[i].newPosition();
  }
- 
+
  target.blackHoleRender();
  
  
