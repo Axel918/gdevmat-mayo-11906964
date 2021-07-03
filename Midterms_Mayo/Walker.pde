@@ -10,7 +10,7 @@ public class Walker
   float mean = 0;
   float x = standardDeviation * gaussian + mean;
   
-  // Colors of other Matters
+  // Colors of Other Matters
   float red = random(0, 255);
   float green = random(0, 255);
   float blue = random(0, 255);
@@ -37,13 +37,8 @@ public class Walker
   // Moves other matters to black hole
   void newPosition()
   {
-    PVector direction = PVector.sub(position, circlePosition);
-    circlePosition.add(direction.normalize());
-  }
-  
-  void computeDirection()
-  {
-    
+    PVector direction = PVector.sub(position, circlePosition); 
+    circlePosition.add(direction.normalize().mult(5));
   }
   
   // Resets Position of black hole and other matters
