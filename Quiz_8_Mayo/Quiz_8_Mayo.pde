@@ -1,6 +1,6 @@
 Walker[] walker = new Walker[10];
-PVector wind = new PVector(0.05, 0);
-PVector gravity = new PVector(0, -0.1);
+PVector wind = new PVector(0.15, 0);
+PVector gravity = new PVector(0, -0.4);
 
 void setup()
 {
@@ -11,30 +11,22 @@ void setup()
   for (int i = 0; i < 10; i++)
   {
     walker[i] = new Walker();
-    walker[i].position.x = Window.left + 200;
-    walker[i].position.y = Window.top - 200;
-    //walker[i].position.y = (2 * (Window.windowHeight / 10) * (i - (10 / 2)));
-    walker[i].scale = 15 * i;
-    walker[i].mass = 1 * i;
+    walker[i].mass = (1 * i) + 1;
+    walker[i].scale = 15 * walker[i].mass;
   }
 }
 
 void draw()
 {
- background(80); 
+   background(80); 
   
- for (int i = 0; i < 10; i++)
- {
-   walker[i].render();
-   walker[i].update();
-   walker[i].applyForce(wind);
-   walker[i].applyForce(gravity);
-   walker[i].checkEdges();
- }
+   for (int i = 0; i < 10; i++)
+   {
+     walker[i].render();
+     walker[i].update();
+     walker[i].applyForce(wind);
+     walker[i].applyForce(gravity);
+     walker[i].checkEdges();
+   }
  
-}
-
-void mouseClicked()
-{
-  setup();
 }
