@@ -1,17 +1,18 @@
 public class Walker
 {
- public PVector position = new PVector();
+ public PVector position = new PVector(random(0, 1080), random(0, 720));
  public PVector velocity = new PVector();
  public PVector acceleration = new PVector();
  
- public float velocityLimit = 500;
- public float scale = 15;
+ public float velocityLimit = 150;
+ public float scale = random(1, 25);
  
  public Walker()
  {
    
  }
  
+ // Get direction
  public void update()
  {
    this.acceleration = PVector.random2D();
@@ -20,13 +21,9 @@ public class Walker
    this.position.add(this.velocity);
  }
  
+ // Get position of the mouse cursor
  void newPosition()
-  {
-    //PVector target = new PVector(mouseX, mouseY);
-    //PVector direction = target.sub(position.x, position.y);
-    //position.add(direction.normalize().mult(0.2));
-    //direction.normalize().mult(0.2);
-    
+  {   
     float targetX = mouseX;
     float directionX = targetX - position.x;
     position.x += directionX * 0.2;
