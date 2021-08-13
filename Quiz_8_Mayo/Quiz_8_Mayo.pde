@@ -11,7 +11,7 @@ void setup()
   for (int i = 0; i < 10; i++)
   {
     walker[i] = new Walker();
-    walker[i].mass = (1 * i) + 1;
+    walker[i].mass = 10 - i;
     walker[i].scale = 15 * walker[i].mass;
   }
 }
