@@ -8,6 +8,7 @@ void setup()
   camera(0, 0, Window.eyeZ, 0, 0, 0, 0, -1, 0);
   int posY = 0;
   
+  // Initialize Walkers
   for (int i = 0; i < 10; i++)
   {
     posY = 2 * (Window.windowHeight / 10) * (i - (10/2));
